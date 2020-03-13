@@ -1,0 +1,102 @@
+html {
+    background-color: gold;
+}
+.container {
+    background-color: gold;
+    color: gainsboro;
+    position:relative;
+    margin-top: 3rem;
+    width: 100%;
+    max-width: 60rem;
+    height: 40rem;
+    padding: 10px 10px 50px 10px;
+    background-size: cover;
+    background-position: center; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    filter: drop-shadow(2px 4px 6px gray);
+}
+h1{
+  font-size: 2.5em;
+}
+h1,h2{
+    text-align: center;
+    font-family: sans-serif;
+    color: red;
+    padding-bottom: inherit;
+}
+
+.row{
+  margin-top: 20px;
+  padding-bottom: inherit;
+}
+.list {
+  color: slategray;
+  font-size: 0.8em;
+  padding: 0 !important;
+  width: 100%;
+  font-family: sans-serif;
+  font-weight: 900;
+  border: 1px solid #dedede;
+  background-color: white;
+}
+.list li {
+  list-style: none;
+  border-bottom: 1px dotted red;
+  text-indent: 25px;
+  height: auto;
+  padding: 8px;
+  text-transform: capitalize;
+}
+.list li:hover {
+  background-color: lightskyblue;
+  -webkit-transition: all 0.2s;
+  -moz-transition:    all 0.2s;
+  -ms-transition:     all 0.2s;
+  -o-transition:      all 0.2s;
+}
+.add-burger{
+  margin-top: 0.8rem;
+}
+form{
+  font-family: sans-serif;
+  color: slategray;
+}
+button{
+  font-family: sans-serif;
+  float: right;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+  color: rgb(221, 218, 218);
+  background: darkgray;
+  transition: all .2s cubic-bezier(.19,1,.22,1);
+  overflow: hidden;
+  outline: none;
+  transform: translateZ(0);
+  border-radius: 8px;
+}
+button:hover{
+  background-color: rgb(189, 19, 19);
+}
+.button-style {
+  float: none;
+  position: relative;
+  padding: 15px 30px;
+  background: darkgray;
+}
+
+@media only screen and (min-width: 767px) and (max-width: 912px){
+  button{
+    font-size: 0.3em;
+  }
+}
+
+@media only screen and (max-width: 451px){
+   button{
+    font-size: 0.3em;
+  }
+}

@@ -1,0 +1,26 @@
+<div class="container">
+    <h1>Eat-Da-Burger</h1>
+    <div class="row">
+        <div id="devoured" class="col-md-6">
+            <h2>Burger Menu</h2>
+            <ul class="list">
+                {{#each burgers}}
+                    {{#unless devoured}}
+                        {{> burgers/burgers-block devoured=false}}
+                    {{/unless}}
+                {{/each}}
+            </ul>
+        </div>
+        <div id="notDevoured" class="col-md-6">
+            <h2>Devoured Burgers</h2>
+            <ul class="list">
+                {{#each burgers}}
+                    {{#if devoured}}
+                        {{> burgers/burgers-block devoured=true}}
+                    {{/if}}
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+    {{> burgers/add-burger}}
+</div>
