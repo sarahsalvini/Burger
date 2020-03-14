@@ -1,7 +1,7 @@
 const express = require('express');
 const handlebars = require('express-handlebars');
 
-var PORT = process.env.PORT || 8080;
+var PORT = 8080;
 
 var app = express();
 
@@ -24,6 +24,7 @@ const routes = require('./controllers/burgers_controller.js')
 // GIVE THE SERVER ACCESS TO ROUTES
 app.use(routes);
 
+console.log(process.env.JAWSDB_URL)
 // START SERVER
 app.listen(PORT,()=>{
     console.log(`SERVER LISTENING ON: http://localhost:${PORT}`);
