@@ -1,6 +1,5 @@
 const express = require('express');
 const handlebars = require('express-handlebars');
-const routes = require('./controllers/burgers_controller.js')
 
 var PORT = process.env.PORT || 8080;
 
@@ -21,6 +20,7 @@ app.engine('handlebars',handlebars({
 }));
 app.set('view engine','handlebars');
 
+const routes = require('./controllers/burgers_controller.js')
 // GIVE THE SERVER ACCESS TO ROUTES
 app.use(routes);
 

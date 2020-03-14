@@ -1,19 +1,24 @@
-var mysql = require("mysql");
-
-var connection = mysql.createConnection({
-  host: "localhost",
-  port: "3306",
-  user: "root",
-  password: "Marileheide8!",
-  database: "burgers_db"
-});
-
-connection.connect(function(err) {
+const mysql = require('mysql');
+let connection;
+if (process.env.JAWSDB_URL) {
+  connection = mysql.createConnection(process.env.JAWSDB_URL);
+} else {
+//THIS IS YOUR LOCAL PERSONALCONNECTION NOT JAWS 
+  connection = mysql.createConnection({
+    host: 'localhost',
+    port: 3306,
+    user: 'root',
+    password: 'Marileheide8!',
+    database: 'burgers_db',
+  });
+}
+// Make connection.
+connection.connect((err) => {
   if (err) {
-    console.error("error connecting: " + err.stack);
+    console.error('error connecting: ' + err.stack);
     return;
   }
-  console.log("connected as id " + connection.threadId);
+  console.log('connected as id ' + connection.threadId);
 });
-
+// Export connection for our ORM to use.
 module.exports = connection;
